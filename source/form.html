@@ -17,7 +17,7 @@
 
 <body class="page__body">
   <header class="main-header">
-    <a class="main-header__logo logo">
+    <a class="main-header__logo logo" href="index.html">
       <picture>
         <source media="(min-width: 1150px)" srcset="img/logo/logo-desktop.svg">
         <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.svg">
@@ -35,7 +35,7 @@
             <a class="site__link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="site__item">
-            <a class="site__link" href="form.html">Вязание на заказ</a>
+            <a class="site__link" title="Вы сейчас здесь.">Вязание на заказ</a>
           </li>
         </ul>
         <ul class="site__sublist">
@@ -61,7 +61,7 @@
     </nav>
   </header>
   <main class="page-main">
-    <h1 class="page-main__title">Вязание на заказ</h1>
+    <h1 class="page-main__title headline">Вязание на заказ</h1>
     <p class="page-main__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и
       мы свяжемся с вами, чтобы уточнить детали.</p>
     <form class="page-main__form form" action="https://echo.htmlacademy.ru/" method="post">
@@ -176,7 +176,7 @@
           placeholder="Опишите все ваши пожелания к заказу"></textarea>
       </fieldset>
       <div class="form__button-wrapper">
-        <button class="form__button button" type="submit">Отправить заказ</button>
+        <button class="form__button button button--inner" type="submit">Отправить заказ</button>
         <span class="form__signature">*Поля обязательны для заполнения</span>
       </div>
     </form>

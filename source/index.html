@@ -62,7 +62,7 @@
   </header>
   <main class="page-main">
     <div class="hero">
-      <h1 class="hero__title">Милые штуки ручной работы для дома</h1>
+      <h1 class="hero__title headline">Милые штуки ручной работы для дома</h1>
       <a class="hero__link type-of-products type-of-products--lighter" href="#">
         <p class="type-of-products__title">Предметы интерьера</p>
       </a>
@@ -71,8 +71,11 @@
       </a>
     </div>
     <section class="hit-product">
-      <h2 class="hit-product__title">Вязаные корзинки</h2>
-      <span class="hit-product__badge">ТОВАР НЕДЕЛИ</span>
+      <h2 class="visually-hidden">Самый покупаемый товар на этой неделе!</h2>
+      <p class="hit-product__badge">Товар недели</p>
+      <a class="hit-product__title-link" href="#">
+        <p class="hit-product__title headline">Вязаные корзинки</p>
+      </a>
       <p class="hit-product__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх
         размерах.</p>
       <dl class="hit-product__list">
@@ -83,25 +86,27 @@
         <dt class="hit-product__feature">Высота:</dt>
         <dd class="hit-product__definition">15 см</dd>
       </dl>
-      <picture>
-        <!-- <source type="image/webp" media="(min-width: 1150px)"
+      <a class="hit-product__image-link" href="#">
+        <picture>
+          <!-- <source type="image/webp" media="(min-width: 1150px)"
             srcset="img/hit/hit-product-desktop.webp 1x, img/hit/hit-product-desktop@2x.webp 2x">
           <source type="image/webp" media="(min-width: 768px)"
             srcset="img/hit/hit-product-tablet.webp 1x, img/hit/hit-product-tablet@2x.webp 2x">
           <source type="image/webp" srcset="img/hit/hit-product-mobile.webp 1x, img/hit/hit-product-mobile@2x.webp 2x"> -->
-        <source media="(min-width: 1150px)"
-          srcset="img/hit/hit-product-desktop.jpg 1x, img/hit/hit-product-desktop@2x.jpg 2x">
-        <source media="(min-width: 768px)"
-          srcset="img/hit/hit-product-tablet.jpg 1x, img/hit/hit-product-tablet@2x.jpg 2x">
-        <img class="hit-product__image" src="img/hit/hit-product-mobile.jpg" width="260" height="315"
-          srcset="img/hit/hit-product-mobile@2x.jpg 2x"
-          alt="Три вязаные корзинки разных размеров, лежащие друг на друге, верхняя - бело-розовая, две нижние - серо-бирюзовые.">
-      </picture>
-      <p class="hit-product__expense">Цена: <span class="hit-product__price">990</span> руб.</p>
-      <a class="hit-product__order button" href="#">ЗАКАЗАТЬ</a>
+          <source media="(min-width: 1150px)"
+            srcset="img/hit/hit-product-desktop.jpg 1x, img/hit/hit-product-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)"
+            srcset="img/hit/hit-product-tablet.jpg 1x, img/hit/hit-product-tablet@2x.jpg 2x">
+          <img class="hit-product__image" src="img/hit/hit-product-mobile.jpg" width="260" height="315"
+            srcset="img/hit/hit-product-mobile@2x.jpg 2x"
+            alt="Три вязаные корзинки разных размеров, лежащие друг на друге, верхняя - бело-розовая, две нижние - серо-бирюзовые.">
+        </picture>
+      </a>
+      <p class="hit-product__expense headline headline--minor">Цена: <span class="hit-product__price">990</span> руб.</p>
+      <a class="hit-product__order button" href="#">Заказать</a>
     </section>
     <section class="advantages">
-      <h2 class="advantages__title">Коротко о нас:</h2>
+      <h2 class="advantages__title headline">Коротко о нас:</h2>
       <ul class="advantages__list">
         <li class="advantages__item advantages__item--ecological">
           <p class="advantages__text">Экологически чистые материалы</p>
@@ -123,9 +128,8 @@
         </li>
       </ul>
     </section>
-
     <section class="reviews">
-      <h2 class="reviews__title">Отзывы</h2>
+      <h2 class="reviews__title headline">Отзывы</h2>
       <ul class="reviews__list">
         <li class="reviews__item reviews__item--current">
           <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества
@@ -146,7 +150,7 @@
       </div>
     </section>
     <section class="contacts">
-      <h2 class="contacts__title">Контакты</h2>
+      <h2 class="contacts__title headline">Контакты</h2>
       <address class="contacts__address">
         <p class="contacts__text">e-mail:</p>
         <a class="contacts__mail" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
@@ -242,25 +246,25 @@
   <div class="modal-container">
     <div class="modal-container__interior modal">
       <section class="modal__content">
-        <h2 class="modal__title">Добавить в корзину</h2>
+        <h2 class="modal__title headline">Добавить в корзину</h2>
         <p class="modal__text">Выберите размер:</p>
         <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
           <ul class="modal__list">
             <li class="modal__item">
               <label class="modal__label modal-control">
-                <input class="visually-hidden modal-control__input" type="radio" name="size" value="small" checked>
+                <input class="visually-hidden modal-control__input" type="checkbox" name="size-small" checked>
                 <span class="modal-control__mark">S</span>
               </label>
             </li>
             <li class="modal__item">
               <label class="modal__label modal-control">
-                <input class="visually-hidden modal-control__input" type="radio" name="size" value="medium">
+                <input class="visually-hidden modal-control__input" type="checkbox" name="size-medium">
                 <span class="modal-control__mark">M</span>
               </label>
             </li>
             <li class="modal__item">
               <label class="modal__label modal-control">
-                <input class="visually-hidden modal-control__input" type="radio" name="size" value="large">
+                <input class="visually-hidden modal-control__input" type="checkbox" name="size-large">
                 <span class="modal-control__mark">L</span>
               </label>
             </li>
