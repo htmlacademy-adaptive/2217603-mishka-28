@@ -1,12 +1,12 @@
 .logo {
   @media (max-width: @mobile-width-only) {
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     padding: 22px;
   }
 
-  // @media (min-width: $tablet-width) {
+  // @media (min-width: @tablet-width) {
   //   display: flex;
   //   align-items: center;
   //   padding-top: 6px;
@@ -14,7 +14,7 @@
   //   height: 52px;
   // }
 
-  // @media (min-width: $desktop-width) {
+  // @media (min-width: @desktop-width) {
   //   width: 202px;
   //   height: 60px;
   // }
@@ -26,16 +26,21 @@
   &[href]:active {
     opacity: 0.3;
   }
+
+  &[href]:focus {
+    .focus-outline;
+    outline-offset: -3px;
+  }
 }
 
 .logo__icon {
   display: block;
-  // @media (min-width: $tablet-width) {
+  // @media (min-width: @tablet-width) {
   //   width: 61px;
   //   height: 50px;
   // }
 
-  // @media (min-width: $desktop-width) {
+  // @media (min-width: @desktop-width) {
   //   width: 70px;
   //   height: 59px;
   // }
