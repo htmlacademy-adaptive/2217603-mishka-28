@@ -1,0 +1,20 @@
+.feature {
+  line-height: 20px;
+}
+
+.feature__line {
+  display: grid;
+  grid-template-columns: 97px auto;
+  gap: 1px;
+  padding: 7px 0 13px;
+  border-bottom: 1px solid @color-light-grey;
+}
+
+.feature__term {
+  grid-column: 1 / 2;
+}
+
+.feature__definition {
+  margin: 0;
+  grid-column: 2 / -1;
+}

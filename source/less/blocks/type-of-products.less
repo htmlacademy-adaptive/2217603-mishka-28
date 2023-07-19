@@ -1,0 +1,65 @@
+.type-of-products {
+  .font(19px, 24px);
+  .container;
+  position: relative;
+  font-weight: 700;
+  padding-top: 24px;
+  padding-bottom: 31px;
+  display: block;
+  color: @color-white;
+  background-color: @color-aquamarine;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 23px;
+    right: 36px;
+    width: 40px;
+    height: 62px;
+    mask-image: url("../img/icons/icon-interior.svg");
+    // mask-image: url("../img/sprite.svg#icon-interior");
+    background-color: @color-green-pine;
+    opacity: 0.5;
+  }
+
+  &:hover {
+    background-color: @color-aquamarine-hover;
+    padding-bottom: calc(31px + 5px);
+    margin-top: -5px;
+
+    &::after {
+      opacity: 0.7;
+    }
+  }
+
+  &:active {
+    background-color: @color-aquamarine-hover;
+
+    &::after {
+      opacity: 0.3;
+    }
+  }
+
+  &--darker {
+    background-color: @color-dark-aquamarine;
+
+    &::after {
+      top: 21px;
+      right: 27px;
+      width: 60px;
+      height: 60px;
+      mask-image: url("../img/icons/icon-toys.svg");
+      // mask-image: url("../img/sprite.svg#icon-toys");
+    }
+
+    &:hover,
+    &:active {
+      background-color: @color-dark-aquamarine-hover;
+    }
+  }
+}
+
+.type-of-products__title {
+  margin: 0;
+  max-width: 130px;
+}

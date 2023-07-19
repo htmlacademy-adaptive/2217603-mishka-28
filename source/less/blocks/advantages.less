@@ -1,0 +1,87 @@
+.advantages {
+  .container;
+  padding-top: 31px;
+  padding-bottom: 29px;
+}
+
+.advantages__title {
+  margin: 0;
+  margin-bottom: 28px;
+}
+
+.advantages__list {
+  .font(17px, 20px);
+  .list-reset;
+  font-weight: 700;
+  color: @color-black;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.advantages__item {
+
+  &::before {
+    content: "";
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--ecological::before {
+    width: 33px;
+    height: 38px;
+    background-image: url("../img/icons/icon-ecological.svg");
+    // background-image: url("../img/sprite.svg#icon-ecological");
+    margin-left: 8px;
+    margin-bottom: 16px;
+  }
+
+  &--cheap::before {
+    width: 47px;
+    height: 27px;
+    background-image: url("../img/icons/icon-cheap.svg");
+    // background-image: url("../img/sprite.svg#icon-cheap");
+    margin-bottom: 26px;
+  }
+
+  &--likes::before {
+    width: 34px;
+    height: 27px;
+    background-image: url("../img/icons/icon-likes.svg");
+    // background-image: url("../img/sprite.svg#icon-likes");
+    margin-left: 7px;
+    margin-bottom: 21px;
+  }
+
+  &--knitting::before {
+    width: 35px;
+    height: 34px;
+    background-image: url("../img/icons/icon-knitting.svg");
+    // background-image: url("../img/sprite.svg#icon-knitting");
+    margin-left: 3px;
+    margin-bottom: 17px;
+  }
+
+  &--domestic::before {
+    width: 55px;
+    height: 23px;
+    background-image: url("../img/icons/icon-domestic.svg");
+    // background-image: url("../img/sprite.svg#icon-domestic");
+    margin-left: -6px;
+    margin-bottom: 26px;
+  }
+
+  &--gift::before {
+    width: 33px;
+    height: 32px;
+    background-image: url("../img/icons/icon-gift.svg");
+    // background-image: url("../img/sprite.svg#icon-gift");
+    margin-left: 3px;
+    margin-bottom: 20px;
+  }
+}
+
+.advantages__text {
+  margin: 0;
+}
