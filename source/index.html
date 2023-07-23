@@ -127,22 +127,24 @@
       <h2 class="advantages__title headline">Коротко о нас:</h2>
       <ul class="advantages__list">
         <li class="advantages__item advantages__item--ecological">
-          <p class="advantages__text">Экологически чистые материалы</p>
+          <p class="advantages__text">Экологически <span class="space space--everywhere"></span>чистые материалы</p>
         </li>
         <li class="advantages__item advantages__item--cheap">
-          <p class="advantages__text">Скандинавский стиль по российской цене</p>
+          <p class="advantages__text">Скандинавский стиль по&nbsp;российской цене</p>
         </li>
         <li class="advantages__item advantages__item--likes">
-          <p class="advantages__text">Увеличивает лайки на фотографиях</p>
+          <p class="advantages__text">Увеличивает лайки на&nbsp;фотографиях</p>
         </li>
         <li class="advantages__item advantages__item--knitting">
-          <p class="advantages__text">Связано вручную с любовью и умилением</p>
+          <p class="advantages__text">Связано вручную <span class="space space--everywhere"></span>с любовью и умилением
+          </p>
         </li>
         <li class="advantages__item advantages__item--domestic">
           <p class="advantages__text">Поддержка отечественного производителя</p>
         </li>
         <li class="advantages__item advantages__item--gift">
-          <p class="advantages__text">Поставляется в подарочной упаковке</p>
+          <p class="advantages__text">Поставляется <span class="space space--everywhere"></span>в подарочной упаковке
+          </p>
         </li>
       </ul>
     </section>
@@ -151,13 +153,12 @@
       <ul class="reviews__list">
         <li class="reviews__item reviews__item--current">
           <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества
-            лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои
-            фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+            лайков, как у&nbsp;популярных инстамамочек. В&nbsp;отчаянии, я накупила аксессуаров и игрушек в Мишке,
+            и&nbsp;мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
           <p class="reviews__name">Анастасия Красильникова</p>
           <p class="reviews__email">@misssssiskras</p>
         </li>
       </ul>
-      <a class="reviews__link button">Написать</a>
       <div class="reviews__controls">
         <button class="reviews__button reviews__button--prev" type="button">
           <span class="visually-hidden">Предыдущий отзыв.</span>
@@ -166,14 +167,17 @@
           <span class="visually-hidden">Следующий отзыв.</span>
         </button>
       </div>
+      <a class="reviews__link button" href="#">Написать</a>
     </section>
     <section class="contacts">
       <h2 class="contacts__title headline">Контакты</h2>
       <address class="contacts__address">
         <p class="contacts__text">e-mail:</p>
-        <a class="contacts__mail" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+        <a class="contacts__mail" href="mailto:info@mimimishkashop.ru">
+          <span class="contacts__mail-text">info@mimimishkashop.ru</span>
+        </a>
         <p class="contacts__text">адрес:</p>
-        <p class="contacts__street">г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101</p>
+        <p class="contacts__street">г. Санкт-Петербург <br>ул. Большая Конюшенная д. 19/8, офис 101</p>
       </address>
       <div class="contacts__map map">
         <iframe
@@ -183,11 +187,11 @@
         <noscript>
           <a class="map__link" href="https://goo.gl/maps/DJQrbEHre8kJVf9e6">
             <picture>
-              <source type="image/webp" media="(min-width: 1150px)"
+              <!-- <source type="image/webp" media="(min-width: 1150px)"
                 srcset="img/map/map-desktop.webp 1x, img/map/map-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)"
                 srcset="img/map/map-tablet.webp 1x, img/map/map-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/map/map-mobile.webp 1x, img/map/map-mobile@2x.webp 2x">
+              <source type="image/webp" srcset="img/map/map-mobile.webp 1x, img/map/map-mobile@2x.webp 2x"> -->
               <source media="(min-width: 1150px)" srcset="img/map/map-desktop.jpg 1x, img/map/map-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/map/map-tablet.jpg 1x, img/map/map-tablet@2x.jpg 2x">
               <img class="map__image" src="img/map/map-mobile.jpg" width="320" height="362" loading="lazy"
@@ -196,11 +200,13 @@
           </a>
         </noscript>
       </div>
-      <a class="contacts__link button" href="#">Напишите нам</a>
+      <div class="contacts__link-wrapper">
+        <a class="contacts__link button" href="#">Напишите нам</a>
+      </div>
     </section>
   </main>
   <footer class="main-footer">
-    <a class="main-footer__logo logo-footer">
+    <a class="main-footer__component logo-footer">
       <svg class="logo-footer__icon" role="img" aria-label="Логотип сайта Мишки." width="102" height="35"
         viewBox="0 0 102 35" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -229,40 +235,42 @@
         <use href="img/sprite.svg#logo-footer"></use>
       </svg> -->
     </a>
-    <ul class="main-footer__list social">
-      <li class="social__item">
-        <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
-          <span class="visually-hidden">Мы во Вконтакте.</span>
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
-          <span class="visually-hidden">Мы на Ютубе.</span>
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
-          <span class="visually-hidden">Мы в Телеграмме.</span>
-        </a>
-      </li>
-    </ul>
+    <div class="main-footer__component">
+      <ul class="social">
+        <li class="social__item">
+          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+            <span class="visually-hidden">Мы во Вконтакте.</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+            <span class="visually-hidden">Мы на Ютубе.</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+            <span class="visually-hidden">Мы в Телеграмме.</span>
+          </a>
+        </li>
+      </ul>
+    </div>
     <a class="main-footer__component copyright" href="https://htmlacademy.ru/intensive/adaptive"
       aria-label="Лендинг интенсива HTML Academy">
-      <span class="copyright__text">HTML Academy</span>
+      <span class="copyright__text">Разработано</span>
       <svg class="copyright__icon" aria-label="Разработано htmlacademy" focusable="false" width="27" height="35"
         viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M13.7539 0.0444336H13.6543L0.208984 1.44443V26.1444L13.6543 34.1444L27 26.1444V1.44443L13.7539 0.0444336ZM25.1077 12.1444L13.6543 5.34443V5.24443H13.5547L13.4551 5.14443V5.24443L2.10129 12.1444V3.14443L13.5547 1.94443L25.1077 3.14443V12.1444ZM13.5547 6.84443L25.0081 13.5444L20.5263 16.1444L13.4551 11.9444V13.3444L19.3312 16.8444L18.4349 17.3444L13.4551 14.3444V15.7444L17.2397 18.0444L16.443 18.5444L13.4551 16.7444V18.1444L15.3474 19.2444L13.5547 20.3444L2.20088 13.6444L13.5547 6.84443ZM2.10129 15.1444L13.4551 21.9444V22.9444L5.58711 18.2444V19.6444L13.5547 24.4444V25.5444L5.58711 20.8444V22.2444L13.5547 27.0444L21.6219 22.1444V16.9444L25.0081 14.9444V24.9444L13.5547 31.8444L2.10129 25.0444V15.1444Z"
-          fill="#63D1BB" />
+          fill="currentColor" />
       </svg>
       <!-- <svg class="copyright__icon" aria-label="Разработано htmlacademy" focusable="false" width="27" height="34">
         <use href="img/sprite.svg#htmlacademy"></use>
       </svg> -->
     </a>
   </footer>
-  <!-- Для открытия модального окна добавить класс "modal--open" необходимому модальному окну-->
-  <div class="modal-container">
-    <div class="modal-container__interior modal">
+  <!-- Для открытия модального окна добавить класс "modal--open" модальному окну-->
+  <div class="modal">
+    <div class="modal__container modal__container--size-select">
       <section class="modal__content">
         <h2 class="modal__title headline">Добавить в корзину</h2>
         <p class="modal__text">Выберите размер:</p>

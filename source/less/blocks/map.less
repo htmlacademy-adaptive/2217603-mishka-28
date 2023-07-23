@@ -1,0 +1,41 @@
+.map {
+  position: relative;
+  min-width: 320px;
+  min-height: 454px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 457px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 527px;
+  }
+
+  iframe {
+    display: block;
+    width: 100%;
+    border: none;
+
+    @media (min-width: @tablet-width) {
+      min-height: 457px;
+    }
+  }
+}
+
+.map__image {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  margin: 0 auto;
+  width: 320px;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 527px;
+  }
+}
