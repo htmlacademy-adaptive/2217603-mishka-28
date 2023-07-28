@@ -1,12 +1,16 @@
 .feature {
   line-height: 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 15px;
+  }
 }
 
 .feature__line {
   display: grid;
   grid-template-columns: 97px auto;
   gap: 1px;
-  padding: 7px 0 13px;
+  padding: 7px 0 12px;
   border-bottom: 1px solid @color-light-grey;
 }
 

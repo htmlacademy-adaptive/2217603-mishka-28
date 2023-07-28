@@ -17,7 +17,7 @@
 
 <body class="page__body">
   <header class="main-header">
-    <a class="main-header__logo logo">
+    <a class="main-header__logo logo" title="Вы уже здесь.">
       <picture>
         <source media="(min-width: 1150px)" srcset="img/logo/logo-desktop.svg">
         <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.svg">
@@ -30,7 +30,7 @@
         <span class="visually-hidden">Открыть меню.</span>
       </button>
       <div class="main-nav__list site">
-        <ul class="site__sublist">
+        <ul class="site__sublist site__sublist--main">
           <li class="site__item">
             <a class="site__link" href="catalog.html">Каталог товаров</a>
           </li>
@@ -38,23 +38,26 @@
             <a class="site__link" href="form.html">Вязание на заказ</a>
           </li>
         </ul>
-        <ul class="site__sublist">
+        <ul class="site__sublist site__sublist--search-cart">
           <li class="site__item site__item--search">
-            <a class="site__link" href="#">Поиск по сайту</a>
+            <a class="site__link site__link--large" href="#">
+              <span class="site__search-text">Поиск по сайту</span>
+            </a>
           </li>
           <li class="site__item site__item--cart">
-            <a class="site__link" href="#">Корзина:&nbsp;<span class="site__cart-amount">пока пуста</span></a>
+            <a class="site__link site__link--large" href="#">Корзина:&nbsp;<span class="site__cart-amount">пока
+                пуста</span></a>
           </li>
         </ul>
         <ul class="site__sublist site__sublist--info">
           <li class="site__item">
-            <a class="site__link" href="#">Новые поступления</a>
+            <a class="site__link site__link--new" href="#">Новые поступления</a>
           </li>
           <li class="site__item">
-            <a class="site__link" href="#">Распродажа</a>
+            <a class="site__link site__link--new" href="#">Распродажа</a>
           </li>
           <li class="site__item">
-            <a class="site__link" href="#">Бесплатная доставка по России</a>
+            <a class="site__link site__link--delivery" href="#">Бесплатная доставка по России</a>
           </li>
         </ul>
       </div>
@@ -79,49 +82,57 @@
     </div>
     <section class="hit-product">
       <h2 class="visually-hidden">Самый покупаемый товар на этой неделе!</h2>
-      <picture>
-        <source media="(min-width: 768px)" srcset="img/icons/badge-hit-product-tight.svg">
-        <img class="hit-product__badge" src="img/icons/badge-hit-product.svg" width="162" height="20"
-          alt="Товар недели.">
-      </picture>
       <a class="hit-product__title-link" href="#">
         <p class="hit-product__title headline">Вязаные корзинки</p>
-      </a>
-      <p class="hit-product__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх
-        размерах.</p>
-      <dl class="hit-product__list feature">
-        <div class="feature__line">
-          <dt class="feature__term">Цвет:</dt>
-          <dd class="feature__definition">тиффани/серый</dd>
-        </div>
-        <div class="feature__line">
-          <dt class="feature__term">Диаметр:</dt>
-          <dd class="feature__definition">25 см</dd>
-        </div>
-        <div class="feature__line">
-          <dt class="feature__term">Высота:</dt>
-          <dd class="feature__definition">15 см</dd>
-        </div>
-      </dl>
-      <a class="hit-product__image-link" href="#">
         <picture>
-          <!-- <source type="image/webp" media="(min-width: 1150px)"
-            srcset="img/hit/hit-product-desktop.webp 1x, img/hit/hit-product-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)"
-            srcset="img/hit/hit-product-tablet.webp 1x, img/hit/hit-product-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="img/hit/hit-product-mobile.webp 1x, img/hit/hit-product-mobile@2x.webp 2x"> -->
-          <source media="(min-width: 1150px)"
-            srcset="img/hit/hit-product-desktop.jpg 1x, img/hit/hit-product-desktop@2x.jpg 2x">
-          <source media="(min-width: 768px)"
-            srcset="img/hit/hit-product-tablet.jpg 1x, img/hit/hit-product-tablet@2x.jpg 2x">
-          <img class="hit-product__image" src="img/hit/hit-product-mobile.jpg" width="260" height="315"
-            srcset="img/hit/hit-product-mobile@2x.jpg 2x"
-            alt="Три вязаные корзинки разных размеров, лежащие друг на друге, верхняя - бело-розовая, две нижние - серо-бирюзовые.">
+          <source media="(min-width: 768px)" srcset="img/icons/badge-hit-product-tight.svg">
+          <img class="hit-product__badge" src="img/icons/badge-hit-product.svg" width="132" height="17"
+            alt="Товар недели.">
         </picture>
       </a>
-      <p class="hit-product__expense headline headline--minor">Цена: <span class="hit-product__price">990</span> руб.
-      </p>
-      <a class="hit-product__order button" href="#">Заказать</a>
+      <div class="hit-product__wrapper">
+        <div class="hit-product__wrapper-text">
+          <p class="hit-product__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх
+            размерах.</p>
+          <dl class="hit-product__list feature">
+            <div class="feature__line">
+              <dt class="feature__term">Цвет:</dt>
+              <dd class="feature__definition">тиффани/серый</dd>
+            </div>
+            <div class="feature__line">
+              <dt class="feature__term">Диаметр:</dt>
+              <dd class="feature__definition">25 см</dd>
+            </div>
+            <div class="feature__line">
+              <dt class="feature__term">Высота:</dt>
+              <dd class="feature__definition">15 см</dd>
+            </div>
+          </dl>
+        </div>
+        <a class="hit-product__image-link" href="#">
+          <picture>
+            <!-- <source type="image/webp" media="(min-width: 1150px)"
+              srcset="img/hit/hit-product-desktop.webp 1x, img/hit/hit-product-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/hit/hit-product-tablet.webp 1x, img/hit/hit-product-tablet@2x.webp 2x">
+            <source type="image/webp"
+              srcset="img/hit/hit-product-mobile.webp 1x, img/hit/hit-product-mobile@2x.webp 2x"> -->
+            <source media="(min-width: 1150px)"
+              srcset="img/hit/hit-product-desktop.jpg 1x, img/hit/hit-product-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)"
+              srcset="img/hit/hit-product-tablet.jpg 1x, img/hit/hit-product-tablet@2x.jpg 2x">
+            <img class="hit-product__image" src="img/hit/hit-product-mobile.jpg" width="260" height="315"
+              srcset="img/hit/hit-product-mobile@2x.jpg 2x"
+              alt="Три вязаные корзинки разных размеров, лежащие друг на друге, верхняя - бело-розовая, две нижние - серо-бирюзовые.">
+          </picture>
+        </a>
+        <div class="hit-product__wrapper-order">
+          <p class="hit-product__expense headline headline--minor">Цена: <span class="hit-product__price">990</span>
+            руб.
+          </p>
+          <a class="hit-product__order button" href="#">Заказать</a>
+        </div>
+      </div>
     </section>
     <section class="advantages">
       <h2 class="advantages__title headline">Коротко о нас:</h2>
@@ -206,7 +217,7 @@
     </section>
   </main>
   <footer class="main-footer">
-    <a class="main-footer__component logo-footer">
+    <a class="main-footer__component logo-footer" title="Вы уже здесь.">
       <svg class="logo-footer__icon" role="img" aria-label="Логотип сайта Мишки." width="102" height="35"
         viewBox="0 0 102 35" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
