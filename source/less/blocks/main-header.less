@@ -20,15 +20,16 @@
     background-color: @color-grey;
 
     @media (min-width: @tablet-width) {
-      top: 88px;
-      background-color: @color-black;
+      display: none;
+      // top: 88px;
+      // background-color: @color-black;
     }
   }
 
   @media (min-width: @tablet-width) {
-    .container;
-    z-index: 1;
-    // background-image: linear-gradient(to bottom, @color-white 89px, @color-background 89px);
+    // .container;
+    background-color: @color-background;
+    // background-image: linear-gradient(to bottom, @color-white 88px, @color-background 88px);
     // display: block;
     // flex-direction: row;
     // flex-wrap: wrap;
@@ -75,7 +76,14 @@
     position: absolute;
     top: 22px;
     left: 48px;
+    z-index: 1;
     //     min-height: 51px;
     //     flex-shrink: 0;
+
+    @media (min-width: @desktop-width) {
+      top: 9px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 }

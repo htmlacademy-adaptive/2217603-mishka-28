@@ -89,7 +89,12 @@
   }
 
   &:focus {
-    .focus-outline;
+    outline: none;
+
+    .contacts__mail-text {
+      .focus-outline;
+      outline-offset: 7px;
+    }
   }
 }
 
