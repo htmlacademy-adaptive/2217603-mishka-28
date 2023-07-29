@@ -10,12 +10,13 @@
   //   text-decoration: none;
   //   max-width: 280px;
 
-  //   @media (min-width: @tablet-width) {
-  //   max-width: 182px;
-  //     justify-self: flex-end;
-  //     flex-wrap: wrap;
-  //     padding-block: 2px;
-  //   }
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    max-width: 180px;
+    //     justify-self: flex-end;
+    //     flex-wrap: wrap;
+    //     padding-block: 2px;
+  }
 
   &:hover .copyright__icon {
     color: @color-dark-aquamarine-hover;
@@ -35,6 +36,10 @@
 .copyright__text {
   .font(19px, 18px);
   font-weight: 700;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 25px;
+  }
 }
 
 .copyright__icon {
