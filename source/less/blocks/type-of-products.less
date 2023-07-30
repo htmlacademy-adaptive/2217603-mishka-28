@@ -14,6 +14,10 @@
     padding: 25px 36px 46px;
   }
 
+  @media (min-width: @desktop-width) {
+    padding-bottom: 51px;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -41,6 +45,10 @@
 
     @media (min-width: @tablet-width) {
       padding-bottom: calc(46px + 5px);
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-bottom: calc(51px + 5px);
     }
 
     &::after {

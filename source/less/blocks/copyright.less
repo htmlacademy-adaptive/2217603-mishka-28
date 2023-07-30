@@ -13,9 +13,15 @@
   @media (min-width: @tablet-width) {
     padding: 0;
     max-width: 180px;
+    gap: 25px;
     //     justify-self: flex-end;
     //     flex-wrap: wrap;
     //     padding-block: 2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 182px;
+    gap: 28px;
   }
 
   &:hover .copyright__icon {
@@ -41,9 +47,9 @@
   .font(19px, 18px);
   font-weight: 700;
 
-  @media (min-width: @tablet-width) {
-    margin-right: 25px;
-  }
+  // @media (min-width: @tablet-width) {
+  //   margin-right: 25px;
+  // }
 }
 
 .copyright__icon {
