@@ -1,32 +1,69 @@
 .product-card {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   align-items: center;
+  width: fit-content;
+
+  &:hover {
+    box-shadow: 0 6px 10px 0 @color-gainsborough;
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0 @color-gainsborough;
+  }
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: auto;
+  }
 }
 
 .product-card__link {
-  // &:hover {
-  //   opacity: 0.6;
-  // }
+  &:hover {
+    opacity: 0.9;
+  }
 
-  // &:active {
-  //   opacity: 0.3;
-  // }
+  &:active {
+    opacity: 0.7;
+  }
 
-  &:focus {
+  &:focus-visible {
     .focus-outline;
   }
 }
 
 .product-card__image {
   display: block;
+
+  @media (min-width: @tablet-width) {
+    width: 334px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 316px;
+  }
 }
 
 .product-card__description {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 260px;
   padding: 28px 28px 26px;
   border: 1px solid @color-light-grey;
+
+  @media (min-width: @tablet-width) {
+    max-width: 335px;
+    height: 100%;
+    padding: 27px 33px 25px 34px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 316px;
+    padding: 27px 32px 25px 28px;
+  }
 }
 
 .product-card__link-title {
@@ -40,7 +77,7 @@
     opacity: 0.3;
   }
 
-  &:focus {
+  &:focus-visible {
     .focus-outline;
   }
 }
@@ -48,24 +85,49 @@
 .product-card__title {
   margin: 0;
   margin-bottom: 6px;
+
+  &--wide {
+    margin-bottom: 9px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 6px;
+  }
 }
 
 .product-card__info {
   font-size: 13px;
   margin: 0;
   margin-bottom: 17px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 15px;
+    margin-bottom: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 13px;
+  }
 }
 
 .product-card__wrapper-price {
   display: flex;
   justify-content: space-between;
   border-top: 1px solid @color-light-grey;
+
+  @media (min-width: @tablet-width) {
+    margin-top: auto;
+  }
 }
 
 .product-card__price {
   margin: 0;
   font-size: 15px;
   padding-top: 23px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+  }
 }
 
 .product-card__order {
@@ -95,7 +157,7 @@
     opacity: 0.3;
   }
 
-  &:focus {
+  &:focus-visible {
     .focus-outline;
   }
 }

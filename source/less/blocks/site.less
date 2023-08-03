@@ -17,8 +17,8 @@
 .site__sublist {
   .list-reset;
 
-  &--info {
-    @media (max-width: @mobile-width-only) {
+  @media (max-width: @mobile-width-only) {
+    &--info {
       display: none;
     }
   }
@@ -49,15 +49,15 @@
     }
 
     &--main {
+      .container;
       gap: 37px;
-      padding-left: 50px;
       margin-right: auto;
       z-index: 1;
     }
 
     &--info {
+      .container;
       justify-content: flex-end;
-      padding-right: 50px;
       z-index: 1;
     }
   }
@@ -175,6 +175,12 @@
   &--catalog {
     @media (min-width: @desktop-width) {
       border-right: 1px solid @color-gainsborough;
+    }
+  }
+
+  &--delivery {
+    @media (min-width: @tablet-width) {
+      margin-left: auto;
     }
   }
 }

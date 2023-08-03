@@ -1,11 +1,33 @@
 .products {
   .container;
   margin-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 53px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 57px;
+  }
 }
 
 .products__list {
   .list-reset;
   display: flex;
+  align-items: center;
   flex-direction: column;
   gap: 28px;
+
+  @media (min-width: @tablet-width) {
+    gap: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    gap: 51px;
+  }
 }
