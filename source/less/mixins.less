@@ -37,3 +37,20 @@
   align-items: center;
   min-height: 88px;
 }
+
+.accent-text {
+  .font(17px, 16px);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: @color-aquamarine;
+}
+
+.form-label-text {
+  .font(17px, 18px);
+  font-weight: 700;
+  color: @color-black;
+
+  @media (min-width: @tablet-width) {
+    font-size: 19px;
+  }
+}

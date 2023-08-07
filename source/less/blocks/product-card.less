@@ -5,6 +5,7 @@
 
   &:hover {
     box-shadow: 0 6px 10px 0 @color-gainsborough;
+    transition: all ease-out 0.3s;
   }
 
   &:active {
@@ -16,13 +17,15 @@
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: auto;
+    display: flex;
+    flex-direction: column;
   }
 }
 
 .product-card__link {
   &:hover {
     opacity: 0.9;
+    transition: all ease-out 0.3s;
   }
 
   &:active {
@@ -71,6 +74,7 @@
 
   &:hover {
     opacity: 0.6;
+    transition: all ease-out 0.3s;
   }
 
   &:active {
@@ -150,6 +154,7 @@
 
   &:hover::after {
     background-color: @color-aquamarine;
+    transition: all ease-out 0.3s;
   }
 
   &:active::after {

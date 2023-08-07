@@ -66,23 +66,27 @@
     </nav>
   </header>
   <main class="page-main">
-    <h1 class="page-main__title headline">Вязание на заказ</h1>
+    <div class="page-main__title-wrapper">
+      <h1 class="page-main__title headline">Вязание на заказ</h1>
+    </div>
     <p class="page-main__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и
       мы свяжемся с вами, чтобы уточнить детали.</p>
     <form class="page-main__form form" action="https://echo.htmlacademy.ru/" method="post">
       <!-- Чтобы показать состояние ошибки, присвойте input класс "field--error" -->
       <fieldset class="form__group">
-        <legend class="form__legend">Тип</legend>
-        <ul class="form__list">
+        <legend class="form__legend">
+          <span class="form__legend-text">Тип</span>
+        </legend>
+        <ul class="form__list form__list--with-radio">
           <li class="form__item">
-            <label class="form__label control">
+            <label class="form__label control control--radio">
               <input class="visually-hidden control__input" type="radio" name="type" value="interior-accessory" checked>
               <span class="control__mark"></span>
               <span class="control__label">Аксессуар для интерьера</span>
             </label>
           </li>
           <li class="form__item">
-            <label class="form__label control">
+            <label class="form__label control control--radio">
               <input class="visually-hidden control__input" type="radio" name="type" value="children's-toy">
               <span class="control__mark"></span>
               <span class="control__label">Детская игрушка</span>
@@ -90,9 +94,11 @@
           </li>
         </ul>
       </fieldset>
-      <fieldset class="form__group">
-        <legend class="form__legend">Цвет</legend>
-        <ul class="form__list">
+      <fieldset class="form__group form__group--darker">
+        <legend class="form__legend">
+          <span class="form__legend-text">Цвет</span>
+        </legend>
+        <ul class="form__list form__list--with-checkbox">
           <li class="form__item">
             <label class="form__label control">
               <input class="visually-hidden control__input" type="checkbox" name="color-white" checked>
@@ -138,51 +144,68 @@
         </ul>
       </fieldset>
       <fieldset class="form__group">
-        <legend class="form__legend">ФИО</legend>
-        <label class="form__label">
-          <span class="form__label-text">Имя:</span>
-          <input class="form__field field" type="text" pattern="^[A-Za-zА-Яа-яЁё\s]+$" name="form-name"
-            placeholder="Введите ваше имя*" required>
-        </label>
-        <label class="form__label">
-          <span class="form__label-text">Фамилия:</span>
-          <input class="form__field field" type="text" pattern="^[A-Za-zА-Яа-яЁё\s]+$" name="form-surname"
-            placeholder="Укажите фамилию*" required>
-        </label>
-        <label class="form__label">
-          <span class="form__label-text">Отчество:</span>
-          <input class="form__field field" type="text" pattern="^[A-Za-zА-Яа-яЁё\s]+$" name="form-patronymic"
-            placeholder="Отчество, если желаете">
-        </label>
+        <legend class="form__legend">
+          <span class="form__legend-text">ФИО</span>
+        </legend>
+        <div class="form__group-wrapper form__group-wrapper--name">
+          <label class="form__label">
+            <span class="form__label-text">Имя:</span>
+            <input class="form__field field" type="text" pattern="^[A-Za-zА-Яа-яЁё\s]+$" name="form-name"
+              placeholder="Введите ваше имя*" required>
+          </label>
+          <label class="form__label">
+            <span class="form__label-text">Фамилия:</span>
+            <input class="form__field field" type="text" pattern="^[A-Za-zА-Яа-яЁё\s]+$" name="form-surname"
+              placeholder="Укажите фамилию*" required>
+          </label>
+          <label class="form__label">
+            <span class="form__label-text">Отчество:</span>
+            <input class="form__field field" type="text" pattern="^[A-Za-zА-Яа-яЁё\s]+$" name="form-patronymic"
+              placeholder="Отчество, если желаете">
+          </label>
+        </div>
       </fieldset>
-      <div class="form__group-wrapper">
-        <fieldset class="form__group">
-          <legend class="form__legend">Тел<legend>
-              <label class="form__label">
-                <input class="form__field field" type="tel"
-                  pattern="^\+7\s?[0-7|9]?[0-9]{2}\s?[0-9]{3}\s?[0-9]{2}\s?[0-9]{2}" name="form-phone"
-                  placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
-                <span class="field__icon field__icon--tel"></span>
-              </label>
+      <div class="form__wrapper">
+        <fieldset class="form__group form__group--tel">
+          <legend class="form__legend">
+            <span class="form__legend-text">Тел</span>
+          </legend>
+          <div class="form__group-wrapper">
+            <label class="form__label">
+              <input class="form__field field field--iconed" type="tel"
+                pattern="^\+7\s?[0-7|9]?[0-9]{2}\s?[0-9]{3}\s?[0-9]{2}\s?[0-9]{2}" name="form-phone"
+                placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+              <span class="form__field-icon form__field-icon--tel"></span>
+            </label>
+          </div>
         </fieldset>
-        <fieldset class="form__group">
-          <legend class="form__legend">E-mail<legend>
-              <label class="form__label">
-                <input class="form__field field" type="email" pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$"
-                  name="form-email" placeholder="Ваш Email*" required>
-                <span class="field__icon field__icon--email"></span>
-              </label>
+        <fieldset class="form__group form__group--email">
+          <legend class="form__legend form__legend--email">
+            <span class="form__legend-text form__legend-text--long">E-mail</span>
+          </legend>
+          <div class="form__group-wrapper">
+            <label class="form__label">
+              <input class="form__field field field--iconed" type="email"
+                pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$" name="form-email" placeholder="Ваш Email*"
+                required>
+              <span class="form__field-icon form__field-icon--email"></span>
+            </label>
+          </div>
         </fieldset>
       </div>
       <fieldset class="form__group">
-        <legend class="form__legend">Доп</legend>
-        <label class="visually-hidden" for="form-comment">Пишите всё, что пожелаете.</label>
-        <textarea class="form__field field field--textarea" id="form-comment" name="form-comment" rows="6"
-          placeholder="Опишите все ваши пожелания к заказу"></textarea>
+        <legend class="form__legend">
+          <span class="form__legend-text">Доп</span>
+        </legend>
+        <div class="form__group-wrapper form__group-wrapper--extra">
+          <label class="visually-hidden" for="form-comment">Пишите всё, что пожелаете.</label>
+          <textarea class="form__field field field--textarea" id="form-comment" name="form-comment" rows="6"
+            placeholder="Опишите все ваши пожелания к заказу"></textarea>
+        </div>
       </fieldset>
       <div class="form__button-wrapper">
-        <button class="form__button button button--inner" type="submit">Отправить заказ</button>
         <span class="form__signature">*Поля обязательны для заполнения</span>
+        <button class="form__button button button--inner" type="submit">Отправить заказ</button>
       </div>
     </form>
   </main>

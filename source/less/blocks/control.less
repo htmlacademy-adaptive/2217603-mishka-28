@@ -1,82 +1,103 @@
-// .control {
-//   gap: 15px;
-//   cursor: pointer;
-//   max-width: fit-content;
+.control {
+  flex-direction: row;
+  align-items: center;
+  gap: 23px;
+  cursor: pointer;
+  max-width: fit-content;
 
-//   @media (min-width: @tablet-width) {
-//     gap: 20px;
-//   }
+  @media (min-width: @tablet-width) {
+    gap: 30px;
+  }
 
-//   &:hover .control__mark {
-//     border-color: @color-extra-grey;
-//   }
+  &--radio {
+    gap: 19px;
 
-//   &:active {
-//     opacity: 0.8;
-//   }
+    @media (min-width: @tablet-width) {
+      gap: 26px;
+    }
+  }
 
-//   &:focus-within {
-//     outline-offset: 2px;
-//     outline: 2px solid @color-green;
-//   }
-// }
+  &:hover .control__mark {
+    border-color: @color-temperate-aquamarine;
+  }
 
-// .control__mark {
-//   flex-shrink: 0;
-//   align-self: start;
-//   position: relative;
-//   width: 30px;
-//   height: 30px;
-//   border: 1px solid @color-extra-light-grey;
+  &:active .control__mark {
+    border-color: @color-smoky-grey;
+  }
 
-//   @media (min-width: @tablet-width) {
-//     width: 40px;
-//     height: 40px;
-//   }
-// }
+  &:focus-within {
+    .focus-outline;
+    // outline-offset: 2px;
+    // outline: 2px solid @color-green;
+  }
+}
 
-// .control__input[type="checkbox"]:checked + .control__mark::before {
-//   content: "";
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   width: 19px;
-//   height: 15px;
-//   mask-image: url("../img/sprite.svg#icon-check");
-//   mask-repeat: no-repeat;
-//   mask-position: center;
-//   mask-size: contain;
-//   background-color: @color-green;
+.control__label {
+  .form-label-text;
+}
 
-//   @media (min-width: @tablet-width) {
-//     width: 26px;
-//     height: 26px;
-//   }
-// }
+.control__mark {
+  flex-shrink: 0;
+  align-self: start;
+  position: relative;
+  width: 38px;
+  height: 38px;
+  border: 2px solid @color-grey;
 
-// .control__input[type="radio"] + .control__mark {
-//   border-radius: 50%;
-// }
+  @media (min-width: @tablet-width) {
+    width: 52px;
+    height: 52px;
+  }
 
-// .control__input[type="radio"]:checked + .control__mark::before {
-//   content: "";
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   width: 13px;
-//   height: 13px;
-//   background-color: @color-green;
-//   border-radius: 50%;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
 
-//   @media (min-width: @tablet-width) {
-//     width: 18px;
-//     height: 18px;
-//   }
-// }
+.control__input[type="radio"] + .control__mark {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 
-// .control__input:disabled + .control__mark,
-// .control__input:disabled ~ .control__label {
-//   opacity: 0.3;
-// }
+  @media (min-width: @tablet-width) {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+.control__input[type="checkbox"]:checked + .control__mark::before {
+  width: 33px;
+  height: 33px;
+  mask-image: url("../img/icons/icon-check.svg");
+  // mask-image: url("../img/sprite.svg#icon-check");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  background-color: @color-black;
+
+  @media (min-width: @tablet-width) {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+.control__input[type="radio"]:checked + .control__mark::before {
+  width: 16px;
+  height: 16px;
+  background-color: @color-temperate-aquamarine;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.control__input:disabled + .control__mark,
+.control__input:disabled ~ .control__label {
+  opacity: 0.3;
+}
