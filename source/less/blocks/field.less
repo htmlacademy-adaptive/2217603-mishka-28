@@ -14,8 +14,21 @@
     opacity: 0.3;
   }
 
+  @media (min-width: @tablet-width) {
+    font-size: 19px;
+    padding: 13px 16px;
+  }
+
   &--iconed {
     padding: 14px 40px 17px 0;
+
+    @media (min-width: @tablet-width) {
+      padding: 13px 16px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 11px 40px 13px 18px;
+    }
   }
 
   &--textarea {
@@ -30,21 +43,6 @@
     }
   }
 
-  @media (min-width: @tablet-width) {
-    font-size: 19px;
-    padding: 13px 16px;
-  }
-
-  //   &::-webkit-outer-spin-button,
-  //   &::-webkit-inner-spin-button {
-  //     appearance: none;
-  //     margin: 0;
-  //   }
-
-  //   &[type="number"] {
-  //     appearance: textfield;
-  //   }
-
   &:hover,
   &:active {
     border-color: @color-temperate-aquamarine;
@@ -56,29 +54,13 @@
 
   &:focus-visible {
     .focus-outline;
-    //     border-color: @color-grey;
-    //     box-shadow: inset 0 0 0 1px @color-grey;
+
+    & + .form__field-icon {
+      background-color: @color-temperate-aquamarine;
+    }
   }
 
   &:disabled {
     opacity: 0.3;
   }
-
-  //   &[required]:not(:focus):not(:placeholder-shown):invalid {
-  //     border-color: @color-error;
-  //     box-shadow: inset 0 0 0 1px @color-error;
-
-  //     & + .field__icon {
-  //       background-color: @color-error;
-  //     }
-  //   }
-
-  //   &--error {
-  //     border-color: @color-error;
-  //     box-shadow: inset 0 0 0 1px @color-error;
-
-  //     & + .field__icon {
-  //       background-color: @color-error;
-  //     }
-  //   }
 }

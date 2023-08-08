@@ -7,8 +7,8 @@
 }
 
 .form__group {
+  .centerer;
   .container;
-  margin: 0;
   padding-block: 0;
   border: none;
 
@@ -16,10 +16,6 @@
     position: relative;
     padding-left: 217px;
     padding-block: 50px;
-
-    &--darker {
-      background-color: @color-smoky-white;
-    }
 
     &--tel {
       padding-bottom: 24px;
@@ -33,26 +29,15 @@
   @media (min-width: @desktop-width) {
     padding-inline: 225px;
 
-    &--darker {
+    &--checkbox {
       padding-right: 50px;
     }
   }
-
-  //   &--bordered {
-  //     @media (max-width: @mobile-width-only) {
-  //       border-bottom: 1px solid @color-light-grey;
-  //     }
-  //   }
 }
 
 .form__wrapper {
   @media (min-width: @tablet-width) {
     background-color: @color-smoky-white;
-    //     @include container;
-    //     display: grid;
-    //     grid-template-columns: repeat(2, 1fr);
-    //     gap: 80px;
-    //     margin-bottom: 2px;
   }
 }
 
@@ -96,10 +81,6 @@
 
 .form__legend-text {
   display: inline-block;
-  // padding-right: 20px;
-  //   max-width: 221px;
-  //   padding-inline: 20px 23px;
-  //   padding-bottom: 5px;
   background-color: @color-white;
   //   text-overflow: ellipsis;
   //   overflow: hidden;
@@ -110,39 +91,7 @@
 
   @media (min-width: @tablet-width) {
     background-color: inherit;
-    //     padding-inline: 39px;
   }
-
-  //   @media (min-width: @desktop-width) {
-  //     padding-inline: 40px;
-  //   }
-
-  //   &--contacts {
-  //     padding-top: 26px;
-  //     padding-right: 14px;
-
-  //     @media (min-width: @tablet-width) {
-  //       max-width: 596px;
-  //       padding-top: 0;
-  //       padding-right: 42px;
-  //     }
-  //   }
-
-  //   &--comment {
-  //     @media (min-width: @tablet-width) {
-  //       max-width: 259px;
-  //     }
-
-  //     @media (min-width: @desktop-width) {
-  //       max-width: 262px;
-  //     }
-  //   }
-
-  //   &--extra {
-  //     @media (min-width: @tablet-width) {
-  //       max-width: 292px;
-  //     }
-  //   }
 }
 
 .form__group-wrapper {
@@ -162,25 +111,8 @@
 
   @media (min-width: @tablet-width) {
     padding: 0;
-    gap: 23px;
-
-    //     padding: 0 69px 0 70px;
-    //     margin-bottom: 65px;
+    gap: 22px;
   }
-
-  //   @media (min-width: @desktop-width) {
-  //     @include container;
-  //     margin-bottom: 67px;
-
-  //     &--information {
-  //       padding: 0;
-  //     }
-
-  //     &--contacts {
-  //       grid-template-columns: repeat(2, 1fr);
-  //       gap: 80px;
-  //     }
-  //   }
 }
 
 .form__label {
@@ -194,11 +126,6 @@
     align-items: center;
     gap: 25px;
   }
-
-  // @media (min-width: @desktop-width) {
-  //   max-width: 700px;
-  //   //     flex-grow: 1;
-  // }
 }
 
 .form__label-text {
@@ -213,24 +140,10 @@
   //   }
 }
 
-// .form__list-wrapper {
-//   @media (min-width: @tablet-width) {
-//     padding-inline: 70px 69px;
-//     padding-top: 8px;
-//     margin-bottom: 75px;
-//   }
-
-//   @media (min-width: @desktop-width) {
-//     padding: 0;
-//     margin-bottom: 65px;
-//   }
-// }
-
 .form__list {
   .list-reset;
   padding-top: 25px;
   padding-bottom: 33px;
-  //   padding-bottom: 31px;
   display: grid;
   gap: 23px;
 
@@ -238,34 +151,17 @@
     padding-top: 33px;
     padding-bottom: 32px;
     gap: 11px;
-    //     padding-block: 22px 19px;
-    //     color: @color-dark-grey;
-
-    //     @media (min-width: @tablet-width) {
-    //       padding: 25px 28px;
-    //       border: 1px solid @color-smoky-grey;
-    //     }
   }
 
   &--with-checkbox {
     @media (min-width: @tablet-width) {
       grid-template-columns: repeat(auto-fit, 210px);
-      //       gap: 32px 60px;
-      //       grid-template-columns: repeat(2, 1fr);
     }
-
-    // @media (min-width: @desktop-width) {
-    //       @include container;
-    //       gap: 54px 80px;
-    //       padding-bottom: 61px;
-    //       grid-template-columns: repeat(4, 1fr);
-    // }
   }
 
   @media (min-width: @tablet-width) {
     padding: 0;
-    gap: 24px 51px;
-    //     padding: 0 70px 52px;
+    gap: 24px 53px;
   }
 }
 
@@ -284,6 +180,10 @@
     right: 26px;
   }
 
+  @media (min-width: @desktop-width) {
+    right: 8px;
+  }
+
   &--tel {
     mask-image: url("../img/icons/icon-phone.svg");
     // mask-image: url("../img/sprite.svg#icon-phone");
@@ -299,6 +199,10 @@
     @media (min-width: @tablet-width) {
       right: 22px;
     }
+
+    @media (min-width: @desktop-width) {
+      right: 3px;
+    }
   }
 }
 
@@ -313,10 +217,12 @@
     align-items: center;
     flex-direction: row;
     gap: 109px;
+    margin-top: 2px;
   }
 
   @media (min-width: @desktop-width) {
     padding-inline: 225px;
+    margin-top: 0;
   }
 }
 
@@ -325,14 +231,8 @@
   padding: 16px;
 
   @media (min-width: @tablet-width) {
-    //     line-height: 26px;
     max-width: 230px;
-    //     padding: 13px;
   }
-
-  //   @media (min-width: @desktop-width) {
-  //     max-width: 568px;
-  //   }
 }
 
 .form__signature {
@@ -342,7 +242,5 @@
 
   @media (min-width: @tablet-width) {
     order: 1;
-    //     font-size: 16px;
-    //     margin-bottom: 7px;
   }
 }

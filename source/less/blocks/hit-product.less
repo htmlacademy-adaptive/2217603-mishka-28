@@ -1,8 +1,5 @@
 .hit-product {
-  .container;
   position: relative;
-  padding-top: 31px;
-  padding-bottom: 42px;
 
   &::after {
     content: "";
@@ -22,22 +19,28 @@
     }
 
     @media (min-width: @desktop-width) {
-      width: calc(100% - 100px);
+      max-width: 1050px;
       left: 50%;
       transform: translateX(-50%);
       height: 23px;
     }
   }
 
-  @media (min-width: @tablet-width) {
-    padding-top: 40px;
-    padding-bottom: 69px;
-  }
+  .centerer {
+    .container;
+    padding-top: 31px;
+    padding-bottom: 42px;
 
-  @media (min-width: @desktop-width) {
-    padding-top: 61px;
-    padding-left: 225px;
-    padding-bottom: 96px;
+    @media (min-width: @tablet-width) {
+      padding-top: 40px;
+      padding-bottom: 69px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 61px;
+      padding-left: 225px;
+      padding-bottom: 96px;
+    }
   }
 }
 

@@ -2,35 +2,24 @@
   @media (max-width: @mobile-width-only) {
     display: none;
   }
+  color: @color-black;
 
-  // max-width: fit-content;
-  // margin: 0 auto;
-  // color: @color-dark;
+  &[href]:hover {
+    color: @color-dark-aquamarine-hover;
+  }
 
-  // @media (min-width: @tablet-width) {
-  // display: block;
-  // margin: 0;
-  // }
+  &[href]:active {
+    color: @color-dark-aquamarine-hover;
+    opacity: 0.3;
+  }
 
-  // &[href]:hover {
-  //   color: @logo-footer-hover;
-  // }
-
-  // &[href]:active {
-  //   color: @logo-footer-active;
-  // }
-
-  // &[href]:focus {
-  //   color: @logo-footer-hover;
-  //   outline: 2px solid @color-green;
-  //   outline-offset: 2px;
-  // }
+  &[href]:focus {
+    .focus-outline;
+  }
 }
 
 .logo-footer__icon {
   @media (min-width: @tablet-width) {
     display: block;
-    //     width: 143px;
-    //     height: 27px;
   }
 }

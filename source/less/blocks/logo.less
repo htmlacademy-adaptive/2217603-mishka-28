@@ -30,6 +30,10 @@
   &[href]:focus {
     .focus-outline;
     outline-offset: -3px;
+
+    @media (min-width: @tablet-width) {
+      outline-offset: 2px;
+    }
   }
 }
 
