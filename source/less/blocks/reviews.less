@@ -55,6 +55,8 @@
 .reviews__title {
   margin: 0;
   margin-bottom: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 39px;
@@ -184,6 +186,9 @@
 }
 
 .reviews__link {
+  text-overflow: ellipsis;
+  overflow: hidden;
+
   @media (min-width: @tablet-width) {
     position: absolute;
     top: 79px;

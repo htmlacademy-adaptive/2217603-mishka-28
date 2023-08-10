@@ -60,12 +60,17 @@
 
 .hero__title {
   .container;
+  align-self: center;
   margin: 0;
-  margin-bottom: 120px;
+  margin-bottom: 115px;
+  padding-bottom: 5px;
   text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
 
   @media (max-width: @mobile-width-only) {
     font-size: 27px;
+    max-width: 320px;
   }
 }
 
@@ -73,6 +78,7 @@
   .list-reset;
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   @media (min-width: @tablet-width) {
     .container;
@@ -82,6 +88,9 @@
 }
 
 .hero__item {
+  max-width: 320px;
+  width: 100%;
+
   @media (min-width: @tablet-width) {
     flex-grow: 1;
     max-width: 334px;

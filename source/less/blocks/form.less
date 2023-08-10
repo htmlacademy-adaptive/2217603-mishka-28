@@ -16,6 +16,7 @@
     position: relative;
     padding-left: 217px;
     padding-block: 50px;
+    overflow: hidden;
 
     &--tel {
       padding-bottom: 24px;
@@ -82,8 +83,9 @@
 .form__legend-text {
   display: inline-block;
   background-color: @color-white;
-  //   text-overflow: ellipsis;
-  //   overflow: hidden;
+  max-width: 150px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 
   &--long {
     padding-right: 18px;
@@ -91,6 +93,10 @@
 
   @media (min-width: @tablet-width) {
     background-color: inherit;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 120px;
   }
 }
 
@@ -105,8 +111,8 @@
   }
 
   &--extra {
-    padding-top: 22px;
-    padding-bottom: 18px;
+    padding-top: 19px;
+    padding-bottom: 17px;
   }
 
   @media (min-width: @tablet-width) {
@@ -131,13 +137,12 @@
 .form__label-text {
   .form-label-text;
   flex-shrink: 0;
-  // max-width: 100px;
-  //   text-overflow: ellipsis;
-  //   overflow: hidden;
 
-  //   @media (min-width: @tablet-width) {
-  //     max-width: 117px;
-  //   }
+  @media (min-width: @tablet-width) {
+    max-width: 101px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
 }
 
 .form__list {
@@ -145,7 +150,7 @@
   padding-top: 25px;
   padding-bottom: 33px;
   display: grid;
-  gap: 23px;
+  gap: 22px;
 
   &--with-radio {
     padding-top: 33px;
@@ -163,6 +168,11 @@
     padding: 0;
     gap: 24px 53px;
   }
+}
+
+.form__item {
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .form__field-icon {
@@ -230,6 +240,8 @@
 
   @media (min-width: @tablet-width) {
     max-width: 230px;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 }
 

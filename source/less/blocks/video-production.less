@@ -180,6 +180,8 @@
   margin-bottom: 41px;
   padding-left: 34px;
   padding-right: 30px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 
   @media (min-width: @tablet-width) {
     .font(15px, 30px);
@@ -190,6 +192,7 @@
   @media (min-width: @desktop-width) {
     padding: 0;
     margin-bottom: 52px;
+    max-width: 260px;
   }
 }
 
@@ -207,4 +210,6 @@
 
 .video-production__order {
   padding: 16px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
