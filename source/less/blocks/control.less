@@ -1,0 +1,100 @@
+.control {
+  flex-direction: row;
+  align-items: center;
+  gap: 23px;
+  cursor: pointer;
+  max-width: fit-content;
+
+  @media (min-width: @tablet-width) {
+    gap: 30px;
+  }
+
+  &--radio {
+    gap: 19px;
+
+    @media (min-width: @tablet-width) {
+      gap: 26px;
+    }
+  }
+
+  &:hover .control__mark {
+    border-color: @color-temperate-aquamarine;
+  }
+
+  &:active .control__mark {
+    border-color: @color-smoky-grey;
+  }
+
+  &:focus-within {
+    .focus-outline;
+  }
+}
+
+.control__label {
+  .form-label-text;
+}
+
+.control__mark {
+  flex-shrink: 0;
+  align-self: start;
+  position: relative;
+  width: 38px;
+  height: 38px;
+  border: 2px solid @color-grey;
+
+  @media (min-width: @tablet-width) {
+    width: 52px;
+    height: 52px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.control__input[type="radio"] + .control__mark {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+.control__input[type="checkbox"]:checked + .control__mark::before {
+  width: 33px;
+  height: 33px;
+  mask-image: url("../img/sprite.svg#icon-check");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  background-color: @color-black;
+
+  @media (min-width: @tablet-width) {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+.control__input[type="radio"]:checked + .control__mark::before {
+  width: 16px;
+  height: 16px;
+  background-color: @color-temperate-aquamarine;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.control__input:disabled + .control__mark,
+.control__input:disabled ~ .control__label {
+  opacity: 0.3;
+}

@@ -1,0 +1,67 @@
+.field {
+  font-size: 17px;
+  font-family: inherit;
+  width: 100%;
+  padding: 11px 8px 12px 0;
+  border: none;
+  border-bottom: 2px solid @color-black;
+  border-radius: 0;
+  color: @color-grey;
+  background-color: inherit;
+
+  &::placeholder {
+    color: @color-black;
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 19px;
+    padding: 13px 16px;
+  }
+
+  &--iconed {
+    padding: 10px 40px 15px 0;
+
+    @media (min-width: @tablet-width) {
+      padding: 13px 16px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 11px 40px 13px 18px;
+    }
+  }
+
+  &--textarea {
+    line-height: 18px;
+    border: 2px solid @color-grey;
+    height: 142px;
+    vertical-align: top;
+    padding: 17px;
+    resize: none;
+
+    @media (min-width: @desktop-width) {
+      max-width: 700px;
+    }
+  }
+
+  &:hover,
+  &:active {
+    border-color: @color-temperate-aquamarine;
+
+    & + .form__field-icon {
+      background-color: @color-temperate-aquamarine;
+    }
+  }
+
+  &:focus-visible {
+    .focus-outline;
+
+    & + .form__field-icon {
+      background-color: @color-temperate-aquamarine;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+}

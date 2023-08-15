@@ -1,0 +1,21 @@
+.headline {
+  .font(25px, 30px);
+  font-weight: 700;
+  color: @color-black;
+
+  @media (min-width: @tablet-width) {
+    .font(43px, 50px);
+  }
+
+  @media (min-width: @desktop-width) {
+    .font(53px, 57px);
+  }
+
+  &--minor {
+    .font(17px, 24px);
+
+    @media (min-width: @tablet-width) {
+      .font(20px, 24px);
+    }
+  }
+}

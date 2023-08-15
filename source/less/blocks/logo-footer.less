@@ -1,0 +1,25 @@
+.logo-footer {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+  color: @color-black;
+
+  &[href]:hover {
+    color: @color-dark-aquamarine-hover;
+  }
+
+  &[href]:active {
+    color: @color-dark-aquamarine-hover;
+    opacity: 0.3;
+  }
+
+  &[href]:focus {
+    .focus-outline;
+  }
+}
+
+.logo-footer__icon {
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}

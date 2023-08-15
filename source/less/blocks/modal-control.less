@@ -1,0 +1,39 @@
+.modal-control {
+  cursor: pointer;
+}
+
+.modal-control__mark {
+  .font(17px, 16px);
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 82px;
+  height: 52px;
+  border: 2px solid @color-light-grey;
+
+  @media (min-width: @tablet-width) {
+    width: 112px;
+  }
+
+  &:hover {
+    border-color: @color-smoky-grey;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.modal-control__input[type="checkbox"]:checked + .modal-control__mark {
+  border-color: @color-aquamarine;
+}
+
+.modal-control__input[type="checkbox"]:focus + .modal-control__mark {
+  .focus-outline;
+  outline-color: @color-grey;
+}
+
+.modal-control__input:disabled + .modal-control__mark {
+  opacity: 0.3;
+}
