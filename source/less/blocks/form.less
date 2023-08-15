@@ -16,7 +16,6 @@
     position: relative;
     padding-left: 217px;
     padding-block: 50px;
-    overflow: hidden;
 
     &--tel {
       padding-bottom: 24px;
@@ -125,9 +124,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  // row-gap: 4px;
-  // --moz-row-gap: 0;
-  // --mox-gap: 0px;
+  gap: 4px;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
@@ -170,11 +167,6 @@
     padding: 0;
     gap: 24px 53px;
   }
-}
-
-.form__item {
-  text-overflow: ellipsis;
-  overflow: hidden;
 }
 
 .form__field-icon {
